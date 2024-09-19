@@ -5,6 +5,6 @@ applications:
   memory: 2048M
   buildpacks:
   - python_buildpack
-  command:  streamlit run st_app.py --server.port 8080
+  command:  streamlit run app.py --server.port 8080
   services:
     - aicore 

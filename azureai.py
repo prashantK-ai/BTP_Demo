@@ -19,7 +19,7 @@ class AzureAI:
         return OAuth2Session(client=client)
 
     def get_token(self):
-        if self._token and self._token_expires_at + self.config.LEEWAY > datetime.now().timestamp():
+        if self._token and self._token_expires_at + float(self.config.LEEWAY) > datetime.now().timestamp():
             return self._token
         logger.info(f"Creating a new token for {self.config.SAP_PROVIDER_URL}")
         token = self._oauth2_session.fetch_token(
