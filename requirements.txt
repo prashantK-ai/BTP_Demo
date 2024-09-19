@@ -1,0 +1,10 @@
+python-dotenv
+langchain
+langchain_openai
+
+streamlit
+cfenv
+openai 
+chromadb 
+PyPDF2
+langchain_community
